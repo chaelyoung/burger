@@ -1,0 +1,48 @@
+body {
+    background: #aa2a11;
+    color: white;
+    font-family: "Kalam", cursive;
+}
+
+h1 {
+    font-family: "Permanent Marker", cursive;
+    color: #FDC021;
+    font-size: 50px;
+}
+
+button {
+    background: #FDC021 !important;
+    color: red !important;
+    font-family: "Fredoka One", cursive !important;
+}
+
+footer {
+    background: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+button:hover {
+    background: red !important;
+    color: #FDC021 !important;
+}
+
+#tm {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+#what {
+    background: black;
+    color: white;
+    padding: 5px;
+}
+
+.h3 {
+    background: black;
+    color: white;
+    padding: 5px;
+}

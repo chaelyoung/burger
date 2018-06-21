@@ -1,0 +1,88 @@
+<br>
+
+<div class="row">
+
+    <div class="col-md-12 text-center" id="top-bar">
+        <h1>MUNCH-A-BURGER<span id="tm">&nbsp;TM</span></h1>
+        <br>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col-md-6 text-center" class="task">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <h3 class="h3">Waiting To Be Eaten...</h3>
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="row">
+
+            {{#each burger_data}} {{#unless this.devoured}}
+
+            <div class="col-md-6 text-center">
+                {{this.id}}. {{this.burger_name}}
+            </div>
+
+            <div class="col-md-6 text-center mt-0">
+                <form method="POST" action="/burgers/update?_method=PUT" class="button-size">
+                    <input type="hidden" name="burger_id" type="text" value={{this.id}}>
+                    <br>
+                    <button type="submit" class="btn btn-primary border-0">EAT EAT EAT!</button>
+                </form>
+            </div>
+
+            {{/unless}} {{/each}}
+
+        </div>
+
+    </div>
+
+    <div class="col-md-6 text-center" class="task">
+
+        <div clas="row">
+
+            <div class="col-md-12">
+                <h3 class="h3">Eaten So Far...</h3>
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="row">
+
+            <div class="col-md-12 text-center" id="eaten">
+                {{#each burger_data}} {{#if this.devoured}}
+                <input class="form-control" type="text" placeholder="{{this.id}}. {{this.burger_name}}"> {{/if}} {{/each}}
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<br>
+
+<div class="row">
+
+    <div class="col-md-12 text-center enter_section">
+        <p id="what">What type of burger do you want to eat?</p>
+        <form action="/burgers/create" method="POST">
+            <input type="text" name="burger_name" class="form-control" value="" id="enter-text">
+            <br>
+            <button type="submit" class="btn btn-primary border-0" id="text-enter-button">SUBMIT</button>
+        </form>
+    </div>
+
+</div>
+
+<br>
